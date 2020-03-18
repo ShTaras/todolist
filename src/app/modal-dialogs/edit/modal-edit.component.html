@@ -1,0 +1,6 @@
+<div class="editWindow  animated bounceInDown fast">
+    <p class="editWindow__notice">Edit text</p>
+    <textarea [(ngModel)]="newText" class="editWindow__newTextTask" placeholder="New text of todo item"></textarea>
+    <button (click)="cancel()" class="editWindow__btnCancel">CANCEL</button>
+    <button (click)="save()" class="editWindow__btnSave">SAVE</button>
+</div>

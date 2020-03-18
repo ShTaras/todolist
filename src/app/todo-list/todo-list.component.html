@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div [ngClass] ="{'eclipse': modalSvc.isEclipseBackground}" class="todoList" id="todoList">
+        <app-header></app-header>
+        <app-todoitem  *ngFor="let todo of items | async" [todo] = todo></app-todoitem>
+    </div>
+    <app-modal-delete *ngIf=modalSvc.isVisibleDltMsg (isConfirmed)="modalSvc.isConfirmDelete($event)"  @fade></app-modal-delete>
+    <app-modal-edit *ngIf=modalSvc.isVisibleEditMsg (isConfirmed)="modalSvc.isConfirmEdit($event)" @fade></app-modal-edit>
+    <app-footer></app-footer>
+</div>

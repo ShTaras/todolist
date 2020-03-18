@@ -1,0 +1,23 @@
+<div  class="todoList__tasks" >  
+    <div [ngClass]="{'task-complete': todo.done}" class="task">
+        <div class="task__info">
+            <div class="task__clock">
+                <div class="task__date" id="date">{{todo.date | date:"dd.MM.yyyy"}}</div>
+                <div class="task__time" id="time">{{todo.date | date:"HH:mm"}}</div>
+            </div>
+            <div class="task__importance">{{todo.importance}}</div>
+            <div class="task__editImportance">
+                <img (click)= todoSvc.upImportance(todo) src="assets/img/arrowup.png" class="task__arrowUp" alt="arrow up">
+                <img (click)= todoSvc.downImportance(todo) src="assets/img/arrowdown.png" class="task__arrowDown" alt="arrow down">
+            </div>
+        </div>
+        <div class="task__text">{{todo.text}}</div>
+        <div class="task__buttons">
+            <img (click)= modalSvc.showDialogEdit(todo) class="task__btnEdit taskBtn" src="assets/img/btnEdit.png" alt="">
+    
+            <img (click)=todoSvc.done(todo) class="task__btnCheck taskBtn" src="assets/img/bthCheck.png" alt="">
+            <img (click)= modalSvc.showDialogDelete(todo) class="task__btnDelete taskBtn" src="assets/img/btnDelete.png" alt="" id="delete">
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,125 @@
+.task {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+  &__clock {
+    margin: auto 2%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__importance {
+    background-color: #717171;
+    min-width: 40px;
+    height: 35px;
+    font-size: 20px;
+    line-height: 35px;
+    color: white;
+    text-align: center;
+    margin: auto 10px;
+  }
+
+  &__editImportance {
+    margin: auto 2px;
+    width: max-content;
+  }
+
+  &__date {
+    font-size: 20px;
+  }
+
+  &__time {
+    text-align: center;
+  }
+
+  &__text {
+    padding: 15px;
+   
+    word-wrap: break-word;
+    max-width: 630px;
+    width: 100%;
+    word-break: break-all;
+    background-color: #eeeeee;
+  }
+
+  &__buttons {
+    height: max-content;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 5px;
+
+    .taskBtn {
+      width: 35px;
+      height: auto;
+      margin: 5px;
+    }
+  }
+
+  &__btnEdit {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
+  &__btnCheck {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
+  &__btnDelete {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
+  &__arrowUp {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      transform: scale(1.2);
+    }
+  }
+
+  &__arrowDown {
+    margin-top: 15px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.task-complete {
+  .task__text {
+    background-color: #d1eef4;
+  }
+
+  .task__btnCheck {
+    opacity: 0.4;
+  }
+}
+
+.task-empty {
+  display: none;
+}
+@media all and (max-width: 750px) {
+  .task {
+    &__buttons {
+      flex-direction: column;
+    }
+    &__info{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

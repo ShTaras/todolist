@@ -1,0 +1,41 @@
+.deleteWindow {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 230px;
+    height: 120px;
+    background-color: #eeeeee;
+  
+    &__notice {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+  
+    &__btnYn {
+      &:nth-child(2) {
+        margin-left: 35px;
+      }
+  
+      font-weight: 600;
+      background-color: inherit;
+      width: 80px;
+      height: 30px;
+      margin-top: 10px;
+      color: #0097f4;
+      border: none;
+  
+      &:hover {
+        background-color: #0097f4;
+        color: white;
+        cursor: pointer;
+        transition: .6s;
+      }
+    }
+  
+  }

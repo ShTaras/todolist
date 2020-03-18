@@ -1,0 +1,60 @@
+.editWindow {
+    position: fixed;
+    padding: 0 15px;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 320px;
+    height: 240px;
+    background-color: #eeeeee;
+  
+    &__notice {
+      text-align: center;
+      margin: 10px;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+  
+    &__newTextTask {
+      resize: none;
+      width: 100%;
+      height: 160px;
+      font-size: 16px;
+    }
+  
+    &__btnCancel {
+      background-color: inherit;
+      width: 49%;
+      height: 30px;
+      color: #0097f4;
+      border: none;
+      font-weight: 600;
+  
+      &:hover {
+        background-color: #0097f4;
+        color: white;
+        cursor: pointer;
+        transition: .6s;
+      }
+    }
+  
+    &__btnSave {
+      background-color: inherit;
+      width: 49%;
+      height: 30px;
+      color: #0097f4;
+      border: none;
+      font-weight: 600;
+  
+      &:hover {
+        background-color: #0097f4;
+        color: white;
+        cursor: pointer;
+        transition: .6s;
+      }
+    }
+  
+  }
